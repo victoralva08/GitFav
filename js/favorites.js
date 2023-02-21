@@ -163,7 +163,7 @@ export class FavoritesDisplay extends FavoritesData {
         tr.innerHTML = `
 
         <td class="user">
-            <a href="">
+            <a href="" target="_blank">
             <img src="" alt="Aqui deveria ter uma imagem">
                 <div class='user-info'>
                 <p>Victor</p>
