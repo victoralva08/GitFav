@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Roboto, sans-serif;
+    font-size: 1.6rem;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --bg-color: black;
+
+    --text-color: hsla(240, 9%, 89%, 1);
+    --text-hover-color: hsla(195, 91%, 25%, 1);
+    --input-text-color: hsla(240, 6%, 51%, 1);
+
+    --favorite-button-color-hover: hsla(240, 9%, 89%, 1);
+    --remove-selector-color: hsla(355, 91%, 66%, 1);
+
+    --table-even-bg: hsla(194, 72%, 13%, 1);
+    --table-odd-bg: hsla(195, 61%, 6%, 0.5);
+    --table-border-color: rgb(17, 154, 200);
+}
+
+/* general */
+
+#hide{
+    display: none;
+}
+
+body{
+    background: var(--bg-color);
+    
+}
+
+#app {
+    width: 111.2rem;   
+    margin: 0 auto;
+}
+
+/* header */
+
+.sr-only {
+    position: absolute;
+    width: .1rem;
+    height: .1rem;
+    padding: 0;
+    margin: -0.1rem;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    margin-top: 11.5rem;
+    margin-bottom: 8.7rem;
+}
+
+header input {
+    width: 46.2rem;
+    background: var(--table-odd-bg);
+    border: none;
+    padding: 1.6rem;
+    border-radius: .5rem;
+
+    color: white;
+}
+
+.search-user{
+    display: flex;
+    gap: .8rem;
+}
+
+header button {
+    border: none;
+    border-radius: .5rem;
+    background: var(--text-hover-color);
+    padding: 1.6rem 3.2rem;
+
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    
+    color: var(--text-color);
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 250ms;
+
+ 
+}
+
+.buttonContainer:hover button{
+    background: white;
+    color: var(--text-hover-color);
+    
+}
+
+.buttonContainer:hover .star{
+    fill: var(--text-hover-color);
+}
+
+
+
+
+/* table */
+
+
+table{
+    
+
+    font-weight: 700;
+    line-height: 160%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table *{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+table td span{
+    font-weight: 400;
+}
+
+thead{
+    background: var(--table-even-bg);
+}
+
+thead th, td{
+    color: var(--text-color);
+
+    text-align: left;
+    padding: 1.6rem 2.4rem 1.6rem 4rem;
+}
+
+table th:first-child{
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+}
+
+table th:last-child{
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+}
+
+table .user a{
+    display: flex;
+    gap: 1.6rem;
+    transition: 300ms;
+}
+
+table .user img{
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+}
+
+table tr{
+    background: var(--table-odd-bg);
+}
+
+table tr:nth-child(even){
+    background: var(--table-even-bg);
+}
+
+table .remove {
+    background: transparent;
+    border: none;
+    color: hsla(355, 91%, 66%, 1);
+    cursor: pointer;
+    transition: 250ms;
+}
+
+table .remove:hover {
+    transform: scale(1.1);
+    filter: brightness(200%);
+}
+
+table .user a:hover {
+    transform: scale(1.05);
+}
+
+table tbody tr{
+    border-top: 1px solid hsla(191, 31%, 42%, 1);
+}
+
+.table-container{
+    border: 1px solid var(--table-border-color);
+    border-radius: 1.2rem;
+    max-height: 68.8rem;
+}
+
+.no-fav-bg {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    justify-content: center;
+    padding: 21rem 23rem 29rem 19.2rem;
+    background: var(--table-odd-bg);
+    border: 1px solid hsla(191, 31%, 42%, 1);
+    border-radius: 1.2rem;
+    margin-bottom: 11.6rem;
+    
+    color: hsla(189, 4%, 32%, 1);
+}
+
+.no-fav-bg svg{
+    width: 13.2rem;
+    height: 12.5rem;
+}
+
+.no-fav-bg h1{
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
